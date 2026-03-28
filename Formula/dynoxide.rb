@@ -1,26 +1,26 @@
 class Dynoxide < Formula
-  desc "Lightweight DynamoDB emulator backed by SQLite"
+  desc "Fast, lightweight drop-in replacement for DynamoDB Local, backed by SQLite"
   homepage "https://github.com/nubo-db/dynoxide"
-  version "0.9.5"
+  version "0.9.6"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nubo-db/dynoxide/releases/download/v0.9.5/dynoxide-aarch64-apple-darwin.tar.gz"
-      sha256 "16a02ef68335696b31a62eeab8d914a78f55167a4f4800b41d9f57b0de14d3fc"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v0.9.6/dynoxide-aarch64-apple-darwin.tar.gz"
+      sha256 "bdacb056fa8bee366dd0a12f8c885bb3bb36c91c259eaeb46de1846e6fa2f129"
     elsif Hardware::CPU.intel?
-      url "https://github.com/nubo-db/dynoxide/releases/download/v0.9.5/dynoxide-x86_64-apple-darwin.tar.gz"
-      sha256 "6d3768e5d9f38ed478815e80bcb38fce24e3093c7e56e3bfc4852d3b9fc23695"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v0.9.6/dynoxide-x86_64-apple-darwin.tar.gz"
+      sha256 "89a6520f65f4e32d4bcd5ebafa879bf37ca56a31c66e2018f5853a427423a1b8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/nubo-db/dynoxide/releases/download/v0.9.5/dynoxide-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "cbdfa9f45e8fc1bd863a2b1b8b1b1ca0a46a0139c67b6d3eff8fd8d0b446e673"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v0.9.6/dynoxide-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "728d4d239d14ec2806b6fff5d4119c282733fd27017074297e2c7be9d2053471"
     elsif Hardware::CPU.intel?
-      url "https://github.com/nubo-db/dynoxide/releases/download/v0.9.5/dynoxide-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "608d56df15b72aec8e67b156370e194fedc5a762226a1e2d74265faeca4fdcd3"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v0.9.6/dynoxide-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "4609d35c2cbb43095fd4fe98e1d713c69af3639b62c9ef680d8a6ef9020e16bd"
     end
   end
 
@@ -32,3 +32,4 @@ class Dynoxide < Formula
     assert_match "dynoxide", shell_output("#{bin}/dynoxide --version")
   end
 end
+
