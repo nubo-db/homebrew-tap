@@ -9,26 +9,26 @@
 class Dynoxide < Formula
   desc "Fast, lightweight drop-in replacement for DynamoDB Local, backed by SQLite"
   homepage "https://github.com/nubo-db/dynoxide"
-  version "0.9.6"
+  version "0.9.7"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      sha256 "31ac7bddc808218b7f07c806372ae1030305895c9dea6f08bba5d55a58369a82"
+      sha256 "e6fe02e364b70faae5b1853e65bc6cfb67efa02d81a3d82dd2a1cab6d14c3e82"
     end
 
     on_intel do
-      sha256 "ffd95cfb8af3812616cba1566b0fc92db2e27f1573216b6a1bdfe69eb7de65e9"
+      sha256 "5e5d79d17405e59a37d6f48ff02b969e39d601e28f0d6663fe9417fc96a1ee39"
     end
   end
 
   on_linux do
     on_arm do
-      sha256 "4aec8fa5eb6bfda48654bdf2dd34106fc6aeccbc21ef1b42bafa6eb9b1c7cd4f"
+      sha256 "75ef3d5c02c3bb65a4f745beed6df8337a378f3677bf506965456d58901b0ee4"
     end
 
     on_intel do
-      sha256 "e59b55366d08e69ac97137a188c935114a9e5e934a73e8c963eebd9f0ed914e3"
+      sha256 "ed58e67b605168d59ac4bdbf322f729fb92992af3c8c2a750301b4299e2e560b"
     end
   end
 
