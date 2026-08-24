@@ -1,5 +1,5 @@
 class Dynoxide < Formula
-  desc "Fast, lightweight drop-in replacement for DynamoDB Local, backed by SQLite"
+  desc "DynamoDB emulator with millisecond startup, verified against real AWS"
   homepage "https://dynoxide.dev"
   version "0.13.0"
   license any_of: ["MIT", "Apache-2.0"]
