@@ -1,32 +1,32 @@
 class Dynoxide < Formula
   desc "Fast, lightweight drop-in replacement for DynamoDB Local, backed by SQLite"
   homepage "https://dynoxide.dev"
-  version "1.1.0"
+  version "1.2.0"
   license any_of: ["MIT", "Apache-2.0"]
   on_macos do
     on_arm do
-      url "https://github.com/nubo-db/dynoxide/releases/download/v1.1.0/dynoxide-aarch64-apple-darwin.tar.gz"
-      sha256 "5c834bf13d69c1a02e4ffb902a0bda0503ffa475cede35b0703f00b663bf7329"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.0/dynoxide-aarch64-apple-darwin.tar.gz"
+      sha256 "3d6c4b589866a127754acedd58a50a5ee7eeaca7ce7c9670e1348ff271d17634"
     end
     on_intel do
-      url "https://github.com/nubo-db/dynoxide/releases/download/v1.1.0/dynoxide-x86_64-apple-darwin.tar.gz"
-      sha256 "204216e98550ddc0d13de00c9d52c3bb928ba9fd69944e3d891fbe3e94181820"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.0/dynoxide-x86_64-apple-darwin.tar.gz"
+      sha256 "f6fe4e7d84530d3fbafc6b2d8355de28def631efa3e10d102b37253f5da3ca7f"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/nubo-db/dynoxide/releases/download/v1.1.0/dynoxide-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "86f7e4bf7ac83ec42e468f83bb759b1c66cfc3577bc29253f2521257a2c93c21"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.0/dynoxide-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "66c7ff2ff039076bdd29f4b05740fa7bfd1fd1469aa70d63572c56fa59b24da8"
     end
     on_intel do
-      url "https://github.com/nubo-db/dynoxide/releases/download/v1.1.0/dynoxide-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "1f18ba25baae62de5e33e0f285f59de855e47b031dacf8e8274fc8c5c6136389"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.0/dynoxide-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f14e2d6ae3acdc259dc11c66593e20d98841a9e8ec6726e4484b1696f04443a1"
     end
   end
   def install
     bin.install "dynoxide"
   end
   test do
-    assert_match version.to_s, shell_output("#{bin}/dynoxide --version")
+    assert_equal "dynoxide #{version}", shell_output("#{bin}/dynoxide --version").strip
   end
 end
