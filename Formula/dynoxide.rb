@@ -1,26 +1,26 @@
 class Dynoxide < Formula
   desc "Fast, lightweight drop-in replacement for DynamoDB Local, backed by SQLite"
   homepage "https://dynoxide.dev"
-  version "1.2.0"
+  version "1.2.1"
   license any_of: ["MIT", "Apache-2.0"]
   on_macos do
     on_arm do
-      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.0/dynoxide-aarch64-apple-darwin.tar.gz"
-      sha256 "3d6c4b589866a127754acedd58a50a5ee7eeaca7ce7c9670e1348ff271d17634"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.1/dynoxide-aarch64-apple-darwin.tar.gz"
+      sha256 "e74922a0c278cc527a124b306c74fee264c34743c7bfd85e3efa9bb5bbdcb1ac"
     end
     on_intel do
-      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.0/dynoxide-x86_64-apple-darwin.tar.gz"
-      sha256 "f6fe4e7d84530d3fbafc6b2d8355de28def631efa3e10d102b37253f5da3ca7f"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.1/dynoxide-x86_64-apple-darwin.tar.gz"
+      sha256 "ba27ee1e612756e6173573daf933f39595138e11b59ff2f15282943bf44f9f2b"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.0/dynoxide-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "66c7ff2ff039076bdd29f4b05740fa7bfd1fd1469aa70d63572c56fa59b24da8"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.1/dynoxide-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "e68c87a7b275775c2551f22e77a1b3593c15400b135dd6c3c8fc3e866ee5bce5"
     end
     on_intel do
-      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.0/dynoxide-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f14e2d6ae3acdc259dc11c66593e20d98841a9e8ec6726e4484b1696f04443a1"
+      url "https://github.com/nubo-db/dynoxide/releases/download/v1.2.1/dynoxide-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "a1cc96618811eaf8ffa817ba55aa628c40b87b7d82ded8b5234cd882c63f206c"
     end
   end
   def install
